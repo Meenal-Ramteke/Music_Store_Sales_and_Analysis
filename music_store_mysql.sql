@@ -76,10 +76,10 @@ SELECT DISTINCT c.email, c.first_name, c.last_name
 		JOIN invoice_line il
 			ON i.invoice_id = il.invoice_id
 	WHERE il.track_id IN (SELECT t.track_id
-							FROM track t
-								JOIN genre g
-									ON g.genre_id = t.genre_id
-							WHERE g.name LIKE 'Rock')
+					FROM track t
+						JOIN genre g
+							ON g.genre_id = t.genre_id
+					WHERE g.name LIKE 'Rock')
 	ORDER BY c.email;
 
 
