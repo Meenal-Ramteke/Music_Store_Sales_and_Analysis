@@ -9,7 +9,7 @@ SELECT title, employee_id, first_name, last_name
         LIMIT 1;
 
         
-/* Q.2  Which contries have the most invoices? */
+/* Q.2  Which countries have the most invoices? */
 
 SELECT billing_country, COUNT(invoice_id) AS invoice_count
 	FROM invoice
@@ -17,7 +17,7 @@ SELECT billing_country, COUNT(invoice_id) AS invoice_count
         ORDER BY invoice_count DESC;
 
 
-/* Q.3  What are top 3 values of total invoice? */
+/* Q.3  What are the top 3 values of the total invoice? */
 
 SELECT ROUND(total,2) AS total_invoice
 	FROM invoice
@@ -25,7 +25,7 @@ SELECT ROUND(total,2) AS total_invoice
         LIMIT 3;
 
 
-/* Q.4  Which city has the best customers? We would like to throw a promotional Music Festival in the city we made the most money. 
+/* Q.4  Which city has the best customers? We would like to throw a promotional Music Festival in the city where we made the most money. 
 Write a query that returns one city that has the highest sum of invoice totals. 
 Return both the city name & sum of all invoice totals*/ 
 
@@ -48,7 +48,7 @@ SELECT c.customer_id, c.first_name, c.last_name, ROUND(SUM(i.total),2) AS invoic
     LIMIT 1;
 
     
-/* Q.6: Write query to return the email, first name, last name, & Genre of all Rock Music listeners. 
+/* Q.6: Write a query to return the email, first name, last name, & Genre of all Rock Music listeners. 
 Return your list ordered alphabetically by email starting with A. */
 
 /*Method 1 */
